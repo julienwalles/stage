@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ex. vuejs</title>
+</head>
+
+<body>
+
+    <h2>exemple1</h2>
+    <div id="firstMessage">
+        {{ message }}
+    </div>
+
+    <hr>
+
+    <h2>exemple2</h2>
+    <div id="app-2">
+        <span v-bind:title="message">
+            Hover your mouse over me for a few seconds
+            to see my dynamically bound title!
+        </span>
+    </div>
+
+
+    <hr>
+
+    <h2>exemple3</h2>
+    <div id="app-3">
+        <div v-bind:style="styleObject">Voici un petit texte</div>
+    </div>
+
+
+    <hr>
+
+    <h2>exemple4</h2>
+    <div id="app-4">
+        <span v-if="seen">Now you see me</span>
+    </div>
+
+
+    <hr>
+
+    <h2>exemple5</h2>
+    <div id="app-5">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+
+
+    <hr>
+
+    <h2>exemple6</h2>
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+
+
+    <hr>
+
+    <h2>exemple7</h2>
+    <div id="app-7">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div>
+
+    <hr>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="app.js" type="module"></script>
+</body>
+
+</html>
